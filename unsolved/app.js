@@ -12,8 +12,28 @@ console.log('Your JS file is linked!');
 
 //Write your code for FizzBuzz below this line:
 
+let myNumber = 2
+typeof myNumber
 
+if (typeof myNumber !== 'number') {
+    console.log('This is not a number')
+}
 
+if (myNumber % 3 === 0) {
+    console.log('Fizz');
+}
+
+if (myNumber % 5 === 0) {
+    console.log('Buzz');
+}
+
+if (myNumber % 3 === 0 && myNumber % 5 === 0) {
+    console.log('FizzBuzz');
+}
+
+if (myNumber % 3 !== 0 && myNumber % 5 !== 0) {
+    console.log(`${myNumber}`)
+}
 
 //2. E-Commerce Item list
 
@@ -28,6 +48,25 @@ console.log('Your JS file is linked!');
 // If the variable input is not an item in the store, then print 'Invalid Item' to the console.
 
 //Write your code for the E-Commerce item list below this line:
+let itemPrice = 'shoes';
+
+switch (itemPrice) {
+    case 'jeans':
+        console.log('Shoes are $50');
+        break;
+    case 'hat':
+        console.log('Hats are $12');
+        break;
+    case 'socks':
+        console.log('Socks are $2');
+        break;
+    case 'shoes':
+        console.log('Shoes are $50');
+        break;
+    default:
+        console.log('Invalid Item');
+        break;
+}
 
 
 
@@ -36,3 +75,9 @@ console.log('Your JS file is linked!');
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 //Write your code below this line:
+
+function getRandomInt(min, max) {
+    min = Math.ceil(50);
+    max = Math.floor(100);
+    return Math.floor(Math.random() * (100 - 50) + 50);
+}
